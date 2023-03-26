@@ -5,20 +5,21 @@
     "github>whitesource/merge-confidence:beta"
   ],
   "packageRules": [
-    /*
     {
       "matchUpdateTypes": ["major"],
       "dependencyDashboardApproval": true,
+      "commitMessagePrefix": "MAJOR ",
     }, 
     {
       "matchUpdateTypes": ["minor"],
       "dependencyDashboardApproval": true,
+      "commitMessagePrefix": "MINOR ",
     }, 
     {
       "matchUpdateTypes": ["patch"],
       "dependencyDashboardApproval": true,
+      "commitMessagePrefix": "PATCH ",
     },
-    */
     
     /* Group High and Very High Confidence updates 
     {
@@ -26,7 +27,7 @@
       "matchConfidence": ["high", "very high"]
     },
     */
-    /* Group by update type (patch/minor, major) */
+    /* Group by update type (patch/minor, major)
     {
       "groupName": "patch and minor",
       "matchUpdateTypes": ["minor", "patch"],
@@ -37,5 +38,6 @@
       "matchUpdateTypes": ["major"],
       "dependencyDashboardApproval": true
     }
+    */
   ]
 }
