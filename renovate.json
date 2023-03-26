@@ -1,6 +1,38 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:base",
+    "github>whitesource/merge-confidence:beta"
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["major"],
+      "dependencyDashboardApproval": true,
+    }, 
+    {
+      "matchUpdateTypes": ["minor"],
+      "dependencyDashboardApproval": true,
+    }, 
+    {
+      "matchUpdateTypes": ["patch"],
+      "dependencyDashboardApproval": true,
+    }, 
+    
+    /* Group High and Very High Confidence updates 
+    {
+      "groupName": "high merge confidence",
+      "matchConfidence": ["high", "very high"]
+    },
+    */
+    /* Group by update type (patch/minor, major) 
+    {
+      "groupName": "patch and minor",
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "groupName": "major",
+      "matchUpdateTypes": ["major"]
+    }
+    */
   ]
 }
