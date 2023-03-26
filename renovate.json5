@@ -29,11 +29,13 @@
     /* Group by update type (patch/minor, major) */
     {
       "groupName": "patch and minor",
-      "matchUpdateTypes": ["minor", "patch"]
+      "matchUpdateTypes": ["minor", "patch"],
+      "dependencyDashboardApproval": true
     },
     {
       "groupName": "major",
-      "matchUpdateTypes": ["major"]
+      "matchUpdateTypes": ["major"],
+      "dependencyDashboardApproval": true
     }
   ]
 }
